@@ -19,7 +19,7 @@ export default function MainPage({navigation, route}) {
 
   useEffect(()=>{
     navigation.setOptions({ //헤더 타이틀 변경
-      title:'ss오늘의띠별운세'
+      title:'오늘의띠별운세'
     })
     setTimeout(()=>{
         setSstate(signdata.sign)
@@ -38,7 +38,6 @@ export default function MainPage({navigation, route}) {
     <ScrollView style={styles.container}>
     <StatusBar style="light"/>
     <Image style={styles.mainImage} source={{uri:main}}/>
-      <Text style={styles.title}>오늘의띠별운세</Text>
       <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
         {
           signState.map((content,i)=>{
@@ -62,12 +61,6 @@ const styles = StyleSheet.create({
     container: {
       backgroundColor: '#fff',
     },
-    title: {
-      fontSize: 30,
-      fontWeight: '700',
-      marginTop:30,
-      marginLeft:20
-    },
     weather:{
       alignSelf:"flex-end",
       paddingRight:20
@@ -82,7 +75,7 @@ const styles = StyleSheet.create({
     middleContainer:{
       marginTop:20,
       marginLeft:10,
-      height:60
+      height:80
     },
     middleButton: {
       width:60,
@@ -92,26 +85,10 @@ const styles = StyleSheet.create({
       borderRadius:10,
       margin:5
     },
-    middleButton9: {
-        width:70,
-        height:35,
-        padding:10,
-        backgroundColor:"black",
-        borderRadius:10,
-        margin:5
-      },
     middleButtonText: {
       color:"#fff",
       fontWeight:"700",
       textAlign:"center" //텍스트의 현재 위치에서의 정렬 
-    },
-    heartButton: {
-      width:60,
-      height:35,
-      padding:10,
-      backgroundColor:"hotpink",
-      borderRadius:10,
-      margin:5
     },
     cardContainer: {
       marginTop:10,

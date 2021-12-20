@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { StyleSheet, Text, View, Image, ScrollView,TouchableOpacity,Alert } from 'react-native';
 
-export default function DetailPage({navigation,route}) {
+export default function SajuDetailPage({navigation,route}) {
 
     const [saju, setSaju] = useState({
         "idx":0,
@@ -36,7 +36,6 @@ export default function DetailPage({navigation,route}) {
                 <Text style={styles.desc}>{saju.desc}</Text>
                 <TouchableOpacity style={styles.button} onPress={()=>popup()}><Text style={styles.buttonText}>지금 확인하러 가기 💨</Text></TouchableOpacity>
             </View>
-            
         </ScrollView>
     
     )
