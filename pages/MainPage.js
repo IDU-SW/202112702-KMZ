@@ -1,49 +1,56 @@
 import React,{useState,useEffect} from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 const main = 'https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a'
-import data from '../data.json';
+import sajudata from '../sajudata.json';
+import signdata from '../signdata.json';
+import Sign from '../components/Sign';
 import Card from '../components/Card';
 import Loading from '../components/Loading';
-export default function MainPage() {
+import { StatusBar } from 'expo-status-bar';
+export default function MainPage({navigation, route}) {
 
-  const [state,setState] = useState([])
+  const [Sstate,setSstate] = useState([])
+  const [Nstate,setNstate] = useState([])
+  const [signState,setSignState] = useState([])
+  const [noticeState,setNoticeState] = useState([])
+
   const [ready,setReady] = useState(true)
 
   useEffect(()=>{
-
+    navigation.setOptions({ //헤더 타이틀 변경
+      title:'ss오늘의띠별운세'
+    })
     setTimeout(()=>{
-        setState(data)
+        setSstate(signdata.sign)
+        setNstate(sajudata.saju)
+        setSignState(signdata.sign)
+        setNoticeState(sajudata.saju)
         setReady(false)
     },1000)
 
   },[])
 
-  let saju = state.saju;
+  let saju = Sstate.saju;
+  let sign = Nstate.sign;
 
   return ready ? <Loading/> :  (
     <ScrollView style={styles.container}>
+    <StatusBar style="light"/>
     <Image style={styles.mainImage} source={{uri:main}}/>
       <Text style={styles.title}>오늘의띠별운세</Text>
       <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>쥐띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>소띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>범띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>토끼띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>용띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>뱀띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>말띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>양띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton9}><Text style={styles.middleButtonText}>원숭이띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>닭띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>개띠</Text></TouchableOpacity>
-        <TouchableOpacity style={styles.middleButton}><Text style={styles.middleButtonText}>돼지띠</Text></TouchableOpacity>
+        {
+          signState.map((content,i)=>{
+            return (<Sign content={content} key={i} navigation={navigation}/>)
+          })
+        }
       </ScrollView>
 
       <View style={styles.cardContainer}>
          {
-          saju.map((content,i)=>{
-            return (<Card content={content} key={i}/>)
+          noticeState.map((content,i)=>{
+            return (<Card content={content} key={i} navigation={navigation}/>)
           })
         }
       </View>

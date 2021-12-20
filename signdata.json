@@ -1,0 +1,100 @@
+{
+    "sign":[
+        {
+            "idx":0,
+            "category":"",
+            "title":"쥐띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"많은 것을 기대 안 하는 것이 좋겠습니다. 더 이상은 잘 되지 않습니다.",
+            "date":""
+        },
+        {
+            "idx":1,
+            "category":"",
+            "title":"소띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"앞에 너무나도 큰산이 가로막고 있습니다.",
+            "date":""
+        },
+        {
+            "idx":2,
+            "category":"",
+            "title":"범띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"오늘 하루는 귀하보다 어려운 사람들을 돕는 날입니다.",
+            "date":""
+        },
+        {
+            "idx":3,
+            "category":"",
+            "title":"토끼띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"현실적이면서 낭만적인 삶을 사십시요.",
+            "date":""
+        },
+        {
+            "idx":4,
+            "category":"",
+            "title":"용띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"아직 시기적으로 좋지 않습니다. 서두르지 마십시요.",
+            "date":""
+        },
+        {
+            "idx":5,
+            "category":"",
+            "title":"뱀띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"귀하의 지도력과 인품을 많은 사람들이 좋게 생각하고 따릅니다.",
+            "date":""
+        },
+        {
+            "idx":6,
+            "category":"",
+            "title":"말띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"일을 적당히 처리하는 것은 금물입니다.",
+            "date":""
+        },
+        {
+            "idx":7,
+            "category":"",
+            "title":"양띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"빛 좋은 개살구라는 말이 딱 맞습니다.",
+            "date":""
+        },
+        {
+            "idx":8,
+            "category":"",
+            "title":"원숭이띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"어려운 시기가 예상됩니다. 고생을 각오하면 좋은 결과가 있을 것입니다.",
+            "date":""
+        },
+        {
+            "idx":9,
+            "category":"",
+            "title":"닭띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"첫 숟가락에 배부르랴?",
+            "date":""
+        },
+        {
+            "idx":10,
+            "category":"",
+            "title":"개띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"신선한 것이 가장 좋은 것입니다.",
+            "date":""
+        },
+        {
+            "idx":11,
+            "category":"",
+            "title":"돼지띠",
+            "image":"https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a",
+            "desc":"위험한 상황이 찾아오고 있습니다. 대비하는 것이 길합니다.",
+            "date":""
+        }
+    ]
+}
