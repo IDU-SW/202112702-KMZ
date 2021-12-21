@@ -1,21 +1,40 @@
 import React from 'react';
-import {View,Text,StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, SafeAreaView} from 'react-native';
 
 export default function Loading(){
-    return(<View style={styles.container}><Text style={styles.title}>로딩</Text></View>)
+    return(
+        <SafeAreaView style={styles.container}>
+            <ImageBackground style={styles.textWrap} source={require('../assets/bg.jpg')}>
+                <View style={styles.rectangle}>
+                <Text style={styles.title}>오늘의운세</Text>
+                </View>
+            </ImageBackground>
+        </SafeAreaView>);
 }
 
 
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor: 'white',
+        backgroundColor: '#fff',
+        opacity: 0.6,
+    },
+    textWrap: {
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    rectangle: {
+        width:'100%',
+        height:90,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#654321',
+        opacity: 0.85
     },
     title: {
-        fontSize:20,
-        fontWeight:'700'
+        fontSize:50,
+        fontWeight:'800',
+        color:'white'
     }
-
 })

@@ -59,6 +59,7 @@ export default function MainPage({navigation, route}) {
         }
       </ScrollView>
 
+      <Text style={styles.title}></Text>
       <View style={styles.cardContainer}>
          {
           noticeState.map((content,i)=>{
@@ -74,14 +75,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
     },
     title: {
-      fontSize: 30,
+      fontSize: 22,
       fontWeight: '700',
-      marginTop:50,
+      marginTop:40,
       marginLeft:20
-    },
-    weather:{
-      alignSelf:"flex-end",
-      paddingRight:20
     },
     mainImage: {
       width:'90%', //컨텐츠의 넓이 값
@@ -91,7 +88,7 @@ const styles = StyleSheet.create({
       alignSelf:"center" //컨텐츠 자체가 앱에서 어떤 곳에 위치시킬지 결정(정렬기능)
     },
     middleContainer:{
-      marginTop:20,
+      marginTop:10,
       marginLeft:10,
       height:'100%'
     },

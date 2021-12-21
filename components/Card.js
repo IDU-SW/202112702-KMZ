@@ -7,7 +7,7 @@ export default function Card({content,navigation}){
             <Image style={styles.cardImage} source={{uri:content.image}}/>
             <View style={styles.cardText}>
                 <Text style={styles.cardTitle} numberOfLines={2}>{content.title}</Text>
-                <Text style={styles.cardDate}>{content.date}</Text>
+                <Text style={styles.cardRead}>👁{content.read}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     cardText: {
       flex:2,
       flexDirection:"column",
-      marginLeft:10,
+      marginTop:20,
+      marginLeft:30,
     },
     cardTitle: {
       fontSize:20,
@@ -41,8 +42,8 @@ const styles = StyleSheet.create({
     cardDesc: {
       fontSize:15
     },
-    cardDate: {
-      fontSize:10,
+    cardRead: {
+      fontSize:15,
       color:"#A6A6A6",
     }
 });

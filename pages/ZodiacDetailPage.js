@@ -15,29 +15,27 @@ export default function SignDetailPage({navigation,route}) {
         navigation.setOptions({
             title:route.params.title,
             headerStyle: {
-                backgroundColor: '#fff',
-                shadowColor: "#000",
+                backgroundColor: '#1F2138',
+                shadowColor: "#1F2138",
                 height:70
             },
-            headerTintColor: "#000",
+            headerTintColor: "#fff"
         })
 
         setZodiac(route.params)
 
     },[])
 
-    return ( 
+    return (
         <ScrollView style={styles.container}>
-            <Image style={styles.image} source={{uri:zodiac.image}}/>
-            <View style={styles.textContainer}>
-                <Text style={styles.title}>{zodiac.title}</Text>
-                <Text style={styles.dateText}>{zodiac.date}</Text>
-                <Text style={styles.desc}>{zodiac.desc}</Text>
-                {/*
-                <TouchableOpacity style={styles.button} onPress={()=>popup()}><Text style={styles.buttonText}>지금 확인하러 가기 💨</Text></TouchableOpacity>
-                */}
-            </View>
-            
+                <Image style={styles.image} source={{uri:zodiac.image}}/>
+                <View style={styles.textContainer}>
+                    <Text style={styles.dateText}>{zodiac.date}</Text>
+                    <Text style={styles.desc}>{zodiac.desc}</Text>
+                    {/*
+                    <TouchableOpacity style={styles.button} onPress={()=>popup()}><Text style={styles.buttonText}>지금 확인하러 가기 💨</Text></TouchableOpacity>
+                    */}
+                </View>
         </ScrollView>
     
     )
@@ -45,7 +43,7 @@ export default function SignDetailPage({navigation,route}) {
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:"#fff"
+        backgroundColor:"#1F2138"
     },
     image:{
         width:140,
@@ -62,15 +60,18 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize:25,
-        fontWeight:'700'
+        fontWeight:'700',
+        color:"#fff"
     },
     desc:{
         marginTop:20,
         fontSize:16,
+        color:"#fff"
     },
     dateText:{
         fontSize:20,
         fontWeight:'500',
-        margin:5
+        margin:5,
+        color:"#fff"
     }
 })

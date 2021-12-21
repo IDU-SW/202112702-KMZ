@@ -25,16 +25,13 @@ export default function SajuDetailPage({navigation,route}) {
         setSaju(route.params)
     },[])
 
-    const popup = () => {
-        Alert.alert("ss")
-    }
     return ( 
         <ScrollView style={styles.container}>
             <Image style={styles.image} source={{uri:saju.image}}/>
             <View style={styles.textContainer}>
                 <Text style={styles.title}>{saju.title}</Text>
                 <Text style={styles.desc}>{saju.desc}</Text>
-                <TouchableOpacity style={styles.button} onPress={()=>popup()}><Text style={styles.buttonText}>지금 확인하러 가기 💨</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.button}><Text style={styles.buttonText}>지금 확인하러 가기 💨</Text></TouchableOpacity>
             </View>
         </ScrollView>
     
@@ -69,8 +66,9 @@ const styles = StyleSheet.create({
         marginTop:40,
         padding:15,
         borderWidth:2,
-        borderColor:'deeppink',
-        borderRadius:7
+        borderColor:'#f76707',
+        borderRadius:7,
+        marginBottom:35
     },
     buttonText:{
         textAlign:'center',
