@@ -13,31 +13,30 @@ export default function Sign({content,navigation}){
 
 
 const styles = StyleSheet.create({
-    middleButton: {
-      width:70,
-      height:'100%',
-      padding:5,
-      backgroundColor:"#fff",
-      borderRadius:10,
-      margin:3
-    },
-    middleButtonText: {
-      color:"#222",
-      fontWeight:"700",
-      textAlign:"center" //텍스트의 현재 위치에서의 정렬 
-    },
-    heartButton: {
-      width:60,
-      height:35,
-      padding:10,
-      backgroundColor:"hotpink",
-      borderRadius:10,
-      margin:5
-    },
-    middleButtonImage: {
-      flex:1,
-      width:'100%',
-      height:'100%',
-      borderRadius:10,
-    },
+  middleButton: {
+    width:71,
+    height:'100%',
+    padding:5,
+    backgroundColor:"#fff",
+    borderRadius:10,
+    margin:3
+  },
+  middleButtonText: {
+    color:"#222",
+    fontWeight:"700",
+    textAlign:"center" //텍스트의 현재 위치에서의 정렬 
+  },
+  heartButton: {
+    width:60,
+    height:35,
+    padding:10,
+    backgroundColor:"hotpink",
+    borderRadius:10,
+    margin:5
+  },
+  middleButtonImage: {
+    width:'100%',
+    height:'75%',
+    borderRadius:10,
+  }
   });

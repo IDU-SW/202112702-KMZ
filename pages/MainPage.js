@@ -1,11 +1,13 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 const main = 'https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a'
 import sajudata from '../sajudata.json';
 import signdata from '../signdata.json';
+import zodiacdata from '../zodiacdata.json';
 import Sign from '../components/Sign';
 import Card from '../components/Card';
+import Zodiac from '../components/Zodiac';
 import Loading from '../components/Loading';
 import { StatusBar } from 'expo-status-bar';
 export default function MainPage({navigation, route}) {
@@ -13,18 +15,20 @@ export default function MainPage({navigation, route}) {
   const [Sstate,setSstate] = useState([])
   const [Nstate,setNstate] = useState([])
   const [signState,setSignState] = useState([])
+  const [zodiacState,setZodiacState] = useState([])
   const [noticeState,setNoticeState] = useState([])
 
   const [ready,setReady] = useState(true)
 
   useEffect(()=>{
     navigation.setOptions({ //헤더 타이틀 변경
-      title:'오늘의띠별운세'
+      title:'오늘의운세'
     })
     setTimeout(()=>{
         setSstate(signdata.sign)
         setNstate(sajudata.saju)
         setSignState(signdata.sign)
+        setZodiacState(zodiacdata.zodiac)
         setNoticeState(sajudata.saju)
         setReady(false)
     },1000)
@@ -37,11 +41,20 @@ export default function MainPage({navigation, route}) {
   return ready ? <Loading/> :  (
     <ScrollView style={styles.container}>
     <StatusBar style="light"/>
-    <Image style={styles.mainImage} source={{uri:main}}/>
+    <Text style={styles.title}>오늘의띠별운세</Text>
       <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
         {
           signState.map((content,i)=>{
             return (<Sign content={content} key={i} navigation={navigation}/>)
+          })
+        }
+      </ScrollView>
+
+      <Text style={styles.title}>오늘의별자리운세</Text>
+      <ScrollView style={styles.middleContainer} horizontal indicatorStyle={"white"}>
+        {
+          zodiacState.map((content,i)=>{
+            return (<Zodiac content={content} key={i} navigation={navigation}/>)
           })
         }
       </ScrollView>
@@ -53,13 +66,18 @@ export default function MainPage({navigation, route}) {
           })
         }
       </View>
-   
     </ScrollView>)
 }
 
 const styles = StyleSheet.create({
     container: {
       backgroundColor: '#fff',
+    },
+    title: {
+      fontSize: 30,
+      fontWeight: '700',
+      marginTop:50,
+      marginLeft:20
     },
     weather:{
       alignSelf:"flex-end",
@@ -75,7 +93,7 @@ const styles = StyleSheet.create({
     middleContainer:{
       marginTop:20,
       marginLeft:10,
-      height:80
+      height:'100%'
     },
     middleButton: {
       width:60,
