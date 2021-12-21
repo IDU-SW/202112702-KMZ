@@ -30,6 +30,7 @@ export default function SignDetailPage({navigation,route}) {
         <ScrollView style={styles.container}>
                 <Image style={styles.image} source={{uri:zodiac.image}}/>
                 <View style={styles.textContainer}>
+                    <Text style={styles.title}>{zodiac.title}</Text>
                     <Text style={styles.dateText}>{zodiac.date}</Text>
                     <Text style={styles.desc}>{zodiac.desc}</Text>
                     {/*
@@ -46,8 +47,8 @@ const styles = StyleSheet.create({
         backgroundColor:"#1F2138"
     },
     image:{
-        width:140,
-        height:145,
+        width:160,
+        height:165,
         marginLeft:117,
         margin:10,
         marginTop:40,
@@ -59,13 +60,13 @@ const styles = StyleSheet.create({
         alignItems:'center'
     },
     title:{
-        fontSize:25,
+        fontSize:30,
         fontWeight:'700',
         color:"#fff"
     },
     desc:{
         marginTop:20,
-        fontSize:16,
+        fontSize:20,
         color:"#fff"
     },
     dateText:{

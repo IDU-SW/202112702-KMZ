@@ -124,12 +124,12 @@ const styles = StyleSheet.create({
         marginTop:20,
     },
     title: {
-        fontSize:25,
+        fontSize:30,
         fontWeight:'700'
     },
     desc:{
         marginTop:10,
-        fontSize:16,
+        fontSize:20,
     },
     button:{
         width:72, //230

@@ -49,17 +49,17 @@ const styles = StyleSheet.create({
         borderRadius:20
     },
     textContainer:{
-        padding:20,
+        padding:15,
         justifyContent:'center',
         alignItems:'center'
     },
     title: {
-        fontSize:20,
-        fontWeight:'700'
+        fontSize:23,
+        fontWeight:'800'
     },
     desc:{
         marginTop:10,
-        fontSize:16,
+        fontSize:17,
     },
     button:{
         width:230,
