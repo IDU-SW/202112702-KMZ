@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
 import { StyleSheet, Text, View, Image, ScrollView,TouchableOpacity,Alert } from 'react-native';
-import signdata from '../signdata.json';
 
 export default function SignDetailPage({navigation,route}) {
 

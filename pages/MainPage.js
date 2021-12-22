@@ -2,11 +2,11 @@ import React,{useState, useEffect} from 'react';
 import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 const main = 'https://firebasestorage.googleapis.com/v0/b/kmz-e99d0.appspot.com/o/pawel-czerwinski-d7iIvTyzccY-unsplash.jpg?alt=media&token=ef566c47-4509-4408-a4d8-e74d1cdf073a'
-import sajudata from '../sajudata.json';
-import signdata from '../signdata.json';
-import zodiacdata from '../zodiacdata.json';
+import sajudata from '../data/sajudata.json';
+import signdata from '../data/signdata.json';
+import zodiacdata from '../data/zodiacdata.json';
 import Sign from '../components/Sign';
-import Card from '../components/Card';
+import Saju from '../components/Saju';
 import Zodiac from '../components/Zodiac';
 import Loading from '../components/Loading';
 import { StatusBar } from 'expo-status-bar';
@@ -16,7 +16,7 @@ export default function MainPage({navigation, route}) {
   const [Nstate,setNstate] = useState([])
   const [signState,setSignState] = useState([])
   const [zodiacState,setZodiacState] = useState([])
-  const [noticeState,setNoticeState] = useState([])
+  const [sajuState,setSajuState] = useState([])
 
   const [ready,setReady] = useState(true)
 
@@ -29,9 +29,9 @@ export default function MainPage({navigation, route}) {
         setNstate(sajudata.saju)
         setSignState(signdata.sign)
         setZodiacState(zodiacdata.zodiac)
-        setNoticeState(sajudata.saju)
+        setSajuState(sajudata.saju)
         setReady(false)
-    },1000)
+    },2000)
 
   },[])
 
@@ -62,8 +62,8 @@ export default function MainPage({navigation, route}) {
       <Text style={styles.title}></Text>
       <View style={styles.cardContainer}>
          {
-          noticeState.map((content,i)=>{
-            return (<Card content={content} key={i} navigation={navigation}/>)
+          sajuState.map((content,i)=>{
+            return (<Saju content={content} key={i} navigation={navigation}/>)
           })
         }
       </View>

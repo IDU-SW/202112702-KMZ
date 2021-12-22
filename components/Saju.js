@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Image, Text, StyleSheet,TouchableOpacity} from 'react-native'
 
-export default function Card({content,navigation}){
+export default function Saju({content,navigation}){
     return(
-        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('SajuDetailPage',content)}}>
+        <TouchableOpacity style={styles.card} onPress={()=>{navigation.navigate('SajuPage',content)}}>
             <Image style={styles.cardImage} source={{uri:content.image}}/>
             <View style={styles.cardText}>
                 <Text style={styles.cardTitle} numberOfLines={2}>{content.title}</Text>
